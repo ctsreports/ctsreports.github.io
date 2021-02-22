@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>CTS</title>
+    <link
+            href="vendor/fontawesome-free/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+    />
+    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/cts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div
+          class="d-flex flex-column justify-content-between nav-main-container"
+        >
+          <ul class="components navbar-nav" id="accordionSidebar">
+            <li id="sidebarCollapseNav" class="action-sidebar-Collapse-nav">
+              <span
+                class="action-collapse d-flex justify-content-between align-items-center"
+              >
+                  <img class="customer-icon" src="img/Menu.svg" />
+                  <img class="no-show-active" src="img/chevron-left.svg"/>
+              </span>
+            </li>
+            <hr class="sidebar-divider" />
+          </ul>
+
+          <ul class="list-unstyled">
+            <hr class="sidebar-divider" />
+            <li class="nav-item" id="logOutButton">
+              <span class="nav-link log-out-container d-flex align-items-center">
+                <img class="customer-icon" src="img/Logout.svg" />
+                <span class="text-log-out">Log Out</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Content Wrapper -->
+      <div id="contentWrapper">
+        <!-- Main Content -->
+        <div id="mainContent" class="d-flex flex-column">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-transparent topbar topbar-app align-items-start"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link rounded-circle action-sidebar-Collapse-nav"
+            >
+              <img src="img/list.svg"/>
+            </button>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav align-items-center row top-info-container">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item col-lg-4 col-sm-4 col-6 d-flex justify-content-lg-start">
+                <span class="logo-container">
+                  <img class="img-logo" src="img/Logo.svg" />
+                </span>
+              </li>
+              <li
+                class="col-lg-4 col-sm-4 col-12 d-flex justify-content-center view-title-container"
+              >
+                <span class="view-title d-flex align-items-center"
+                  >Total and Active Users Search report</span
+                >
+              </li>
+              <!-- Nav Item - User Information -->
+              <li
+                class="li-info-profile nav-item col-lg-4 col-sm-4 col-6 d-flex justify-content-end"
+              >
+                <span class="info-profile" id="userDropdown">
+                  <span >Robert Kiyokiote</span>
+                  <img class="img-profile" src="img/undraw_profile.svg" />
+                </span>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid p-0">
+            <div class="filter-container"></div>
+            <div class="report-area-container container-fluid p-0">
+              <div class="fuel-consumption"></div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/action-sidebar.js"></script>
+  </body>
+</html>
