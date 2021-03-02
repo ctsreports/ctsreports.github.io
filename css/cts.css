@@ -111,7 +111,7 @@ a:focus {
     padding: 0.625rem;
 }
 
-#sidebar ul li.active > a,
+#sidebar ul li a.active,
 #sidebar ul li a[aria-expanded="true"] {
     opacity: 1;
 }
