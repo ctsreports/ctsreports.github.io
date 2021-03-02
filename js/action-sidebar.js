@@ -101,6 +101,8 @@ $(document).ready(function () {
         $(this).addClass("active");
         event.preventDefault();
         $('#report_frame').attr("src" , $(this).attr("data-url"));
+        $('#report_name').text($(this).text()+" report.");
+
       }
     );
 });
