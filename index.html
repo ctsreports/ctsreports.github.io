@@ -72,7 +72,7 @@
                 <span class="view-title d-flex align-items-center">Total and Active Users Search report</span>
                     </li>
                     <!-- Nav Item - User Information -->
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                      <div id="my-signin2"></div>
                     </li>
                 </ul>
             </nav>
@@ -107,6 +107,26 @@
 </script>  
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-client_id" content="902132525047-aan0jnnqsva2i1jda01guepv0oo5ttj7.apps.googleusercontent.com">
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
 
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 </html>
