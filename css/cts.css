@@ -502,3 +502,7 @@ a[data-toggle="collapse"] {
         padding: 0;
     }
 }
+
+#report_frame, .embed-responsive {
+    height:2000px;
+}

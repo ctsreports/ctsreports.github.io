@@ -72,11 +72,7 @@
                 <span class="view-title d-flex align-items-center">Total and Active Users Search report</span>
                     </li>
                     <!-- Nav Item - User Information -->
-                    <li class="li-info-profile nav-item col-lg-4 col-sm-4 col-6 d-flex justify-content-end">
-                <span class="info-profile" id="userDropdown">
-                  <span>Robert Kiyokiote</span>
-                  <img class="img-profile" src="img/undraw_profile.svg"/>
-                </span>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                     </li>
                 </ul>
             </nav>
@@ -89,7 +85,7 @@
 <!--                  <a class="nav-link" href="https://datastudio.google.com/s/r6rbPlcz8B8">https://datastudio.google.com/s/r6rbPlcz8B8</a>-->
                     <div class="embed-responsive embed-responsive-16by9">
                         <!-- <iframe width="800" height="600" src="https://datastudio.google.com/embed/reporting/66fb90de-4714-4e64-bae0-f0764af649d1/page/xzE3B" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-                        <iframe class="embed-responsive-item"
+                        <iframe id="report_frame" class="embed-responsive-item" onload="resizeIframe(this)"
                                 src="https://datastudio.google.com/embed/reporting/2a009964-b747-4f31-a8fb-c3ffcff88932/page/TUh3B"
                                 allowfullscreen></iframe>
                     </div>
@@ -104,5 +100,13 @@
 <script src="lib/jquery.min.js"></script>
 <script src="lib/bootstrap.min.js"></script>
 <script src="js/action-sidebar.js"></script>
+<script type="text/javascript">
+  function resizeIframe(iframe) {
+    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  }
+</script>  
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="902132525047-aan0jnnqsva2i1jda01guepv0oo5ttj7.apps.googleusercontent.com">
+
 </body>
 </html>

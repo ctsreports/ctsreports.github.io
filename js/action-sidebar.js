@@ -1,7 +1,7 @@
 const userStatics = [
-    {text: "Ages", icon: "pie_chart"},
-    {text: "Gender", icon: "bar_chart"},
-    {text: "Search Types", icon: "bar_chart"},
+    {text: "Ages", icon: "pie_chart", url: "https://datastudio.google.com/reporting/2a009964-b747-4f31-a8fb-c3ffcff88932/page/TUh3B"},
+    {text: "Gender", icon: "bar_chart", url: "https://datastudio.google.com/embed/reporting/335f010e-5666-4b06-a07b-99b2bf23ad2b/page/TUh3B"},
+    {text: "Search Types", icon: "bar_chart", url: "https://datastudio.google.com/embed/reporting/bd0e80b6-2387-4262-a3c0-f386879cb9a3/page/TUh3B"},
     {text: "Search Frequency", icon: "line_chart"},
     {text: "Destination search in map", icon: "pie_chart"},
     {text: "Location Search", icon: "bar_chart"},
@@ -50,7 +50,7 @@ const sidebarElement = [
 const buildMenusCollapse = (elements) =>
     elements
         .map(
-            (item) => `<a class="collapse-item d-flex align-items-center" >
+            (item) => `<a data-url="${item.url}" class="collapse-item d-flex align-items-center" >
 <img class="customer-icon" src="img/${item.icon}.svg" />
 <span>${item.text}</span>
 </a>`
@@ -95,4 +95,12 @@ $(document).ready(function () {
     buildMenus(sidebarElement);
     $(".action-sidebar-Collapse-nav").on("click", openCloseSidebar());
     $("a.collapsed").off("click").on("click", openCloseSidebar(true));
+    $("a.collapse-item").click(
+      function () {
+        $("a").removeClass("active");
+        $(this).addClass("active");
+        event.preventDefault();
+        $('#report_frame').attr("src" , $(this).attr("data-url"));
+      }
+    );
 });
