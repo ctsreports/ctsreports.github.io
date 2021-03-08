@@ -20,6 +20,7 @@ const vehicle = [
     {text: "Diagnostics", icon: "line_chart"},
     {text: "Vehicles by region", icon: "pie_chart"},
     {text: "Violations", icon: "bar_chart"},
+    {text: "Average top speed", icon: "bar_chart", url:"https://datastudio.google.com/embed/reporting/c2619f8f-973c-4758-9d6d-667c18bc8a15/page/cPI4B"},
 ];
 const trips = [{text: "Trips", icon: "bar_chart"}];
 
